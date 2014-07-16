@@ -2,9 +2,10 @@ source "https://rubygems.org"
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem "rails", "4.1.2"
+gem "rails", "4.1.1"
 gem "bootstrap-sass", "2.3.2.0"
 gem "sprockets", "2.11.0"
+gem "bcrypt-ruby", "3.1.2"
 # Use sqlite3 as the database for Active Record
 gem "sqlite3"
 # Use SCSS for stylesheets
@@ -39,6 +40,10 @@ gem "spring", group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+group :test do
+  gem "factory_girl_rails", "4.2.0"
+end
 
 group :production do
   gem "pg", "0.15.1"
