@@ -6,12 +6,14 @@ class UsersController < ApplicationController
   end
 
   def new
+    @user = User.new
   end
 
   def create
     
     if @user.save
-      flash[:success] = "Welcome to the Sample App!"
+      sign_in @user
+      flash[:success] = "Welcome to the Wordlist!"
       redirect_to @user
     else
       render 'new'
