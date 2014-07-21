@@ -8,4 +8,13 @@
       </h1>
     </section>
   </aside>
+  <div class="span8">
+    <%= link_to "Wordlist", wordlist_path, class: "btn btn-large btn-primary" %>
+    <%= link_to "Categories", Categories_path, class: "btn btn-large btn-primary" %>
+    <h1>Activities</h1>
+    <ol class="activities">
+        <%= render @activities %>
+      </ol>
+      <%= will_paginate @activities %>
+  </div>
 </div>
